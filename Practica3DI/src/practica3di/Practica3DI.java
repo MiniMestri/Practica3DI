@@ -29,8 +29,11 @@ public class Practica3DI extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jProgressBar1 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        
+        
 
         jButton1.setText("...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +58,7 @@ public class Practica3DI extends javax.swing.JFrame {
         jLabel4.setText("CONVERSOR DE VIDEOS");
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\fonsi\\Desktop\\ESTUDIO\\IMF 2\\DESARROLLO DE INTERFACES\\Practicas\\Practica3DI\\img\\logo.jpg"));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"avi", "mp4", "mkv"}));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"avi", "mp4", "mkv","mp3","wav"}));
 
         jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14));
         jLabel5.setText("Indique el formato");
@@ -212,6 +215,8 @@ public class Practica3DI extends javax.swing.JFrame {
                 new Practica3DI().setVisible(true);
             }
         });
+        
+        
     }
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -228,5 +233,6 @@ public class Practica3DI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JProgressBar jProgressBar1;
 
 }
