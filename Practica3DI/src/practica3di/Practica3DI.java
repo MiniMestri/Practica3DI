@@ -78,6 +78,7 @@ public class Practica3DI extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        jTextField1.setText("C://ffmpeg//bin//ffmpeg.exe");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -167,7 +168,6 @@ public class Practica3DI extends javax.swing.JFrame {
 
         int resultado = jFileChooser1.showOpenDialog(this);
         if (resultado != JFileChooser.CANCEL_OPTION) {
-            System.out.println("No ha elegido nada");
             File ruta = jFileChooser1.getSelectedFile();
 
             jTextField2.setText(ruta.getAbsolutePath());
