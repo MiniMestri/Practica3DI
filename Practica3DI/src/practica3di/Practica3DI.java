@@ -15,10 +15,9 @@ public class Practica3DI extends javax.swing.JFrame {
 
     private void initComponents() {
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -26,14 +25,26 @@ public class Practica3DI extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jFileChooser1 = new javax.swing.JFileChooser();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jProgressBar1 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        
-        
+
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 14)); 
+        jLabel1.setText("Indica la ruta del ejecutable");
+        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 14)); 
+        jLabel2.setText("Indica el archivo de entrada");
+        jLabel3.setFont(new java.awt.Font("Rockwell", 0, 14)); 
+        jLabel3.setText("Indica el archivo destino");
+        jLabel4.setFont(new java.awt.Font("Rockwell Condensed", 0, 48)); 
+        jLabel4.setText("CONVERSOR DE VIDEOS");
+        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14));
+        jLabel5.setText("Indique el formato");
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\fonsi\\Desktop\\ESTUDIO\\IMF 2\\DESARROLLO DE INTERFACES\\Practicas\\Practica3DI\\img\\logo.jpg"));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"avi", "mp4", "mkv", "mp3", "wav"}));
 
         jButton1.setText("...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -47,23 +58,7 @@ public class Practica3DI extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
-        jLabel1.setText("Indica la ruta del ejecutable");
-        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
-        jLabel2.setText("Indica el archivo de entrada");
-        jLabel3.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
-        jLabel3.setText("Indica el archivo destino");
-        jLabel4.setFont(new java.awt.Font("Rockwell Condensed", 0, 48)); // NOI18N
-        jLabel4.setText("CONVERSOR DE VIDEOS");
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\fonsi\\Desktop\\ESTUDIO\\IMF 2\\DESARROLLO DE INTERFACES\\Practicas\\Practica3DI\\img\\logo.jpg"));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"avi", "mp4", "mkv","mp3","wav"}));
-
-        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14)); 
-        jLabel5.setText("Indique el formato");
-
-        jButton3.setFont(new java.awt.Font("Impact", 0, 24)); 
+        jButton3.setFont(new java.awt.Font("Impact", 0, 24));
         jButton3.setText("INICIO");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +66,7 @@ public class Practica3DI extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Impact", 0, 24)); 
+        jButton4.setFont(new java.awt.Font("Impact", 0, 24));
         jButton4.setText("BORRAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,11 +162,11 @@ public class Practica3DI extends javax.swing.JFrame {
         jFileChooser1.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
         int resultado = jFileChooser1.showOpenDialog(this);
-        if (resultado != JFileChooser.CANCEL_OPTION) {
+       
             File ruta = jFileChooser1.getSelectedFile();
 
             jTextField2.setText(ruta.getAbsolutePath());
-        }
+        
 
     }
 
@@ -218,8 +213,7 @@ public class Practica3DI extends javax.swing.JFrame {
                 new Practica3DI().setVisible(true);
             }
         });
-        
-        
+
     }
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -236,6 +230,5 @@ public class Practica3DI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JProgressBar jProgressBar1;
 
 }
