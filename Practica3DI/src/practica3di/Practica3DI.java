@@ -60,10 +60,10 @@ public class Practica3DI extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"avi", "mp4", "mkv","mp3","wav"}));
 
-        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14)); 
         jLabel5.setText("Indique el formato");
 
-        jButton3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Impact", 0, 24)); 
         jButton3.setText("INICIO");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +71,7 @@ public class Practica3DI extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Impact", 0, 24)); 
         jButton4.setText("BORRAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,10 +167,10 @@ public class Practica3DI extends javax.swing.JFrame {
 
         int resultado = jFileChooser1.showOpenDialog(this);
         if (resultado != JFileChooser.CANCEL_OPTION) {
+            System.out.println("No ha elegido nada");
             File ruta = jFileChooser1.getSelectedFile();
 
             jTextField2.setText(ruta.getAbsolutePath());
-
         }
 
     }
