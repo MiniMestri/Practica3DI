@@ -48,22 +48,22 @@ public class Practica3DI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 14));
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jLabel1.setText("Indica la ruta del ejecutable");
-        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 14));
+        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jLabel2.setText("Indica el archivo de entrada");
-        jLabel3.setFont(new java.awt.Font("Rockwell", 0, 14));
+        jLabel3.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jLabel3.setText("Indica el archivo destino");
-        jLabel4.setFont(new java.awt.Font("Rockwell Condensed", 0, 48));
+        jLabel4.setFont(new java.awt.Font("Rockwell Condensed", 0, 48)); // NOI18N
         jLabel4.setText("CONVERSOR DE VIDEOS");
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\fonsi\\Desktop\\ESTUDIO\\IMF 2\\DESARROLLO DE INTERFACES\\Practicas\\Practica3DI\\img\\logo.jpg"));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"avi", "mp4", "mkv","mp3","wav"}));
 
-        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14));
+        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jLabel5.setText("Indique el formato");
 
-        jButton3.setFont(new java.awt.Font("Impact", 0, 24));
+        jButton3.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         jButton3.setText("INICIO");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,14 +71,13 @@ public class Practica3DI extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Impact", 0, 24));
+        jButton4.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         jButton4.setText("BORRAR");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jTextField1.setText("C://ffmpeg//bin//ffmpeg.exe");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -166,11 +165,13 @@ public class Practica3DI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         jFileChooser1.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
-        jFileChooser1.showOpenDialog(this);
+        int resultado = jFileChooser1.showOpenDialog(this);
+        if (resultado != JFileChooser.CANCEL_OPTION) {
+            File ruta = jFileChooser1.getSelectedFile();
 
-        File ruta = jFileChooser1.getSelectedFile();
+            jTextField2.setText(ruta.getAbsolutePath());
 
-        jTextField2.setText(ruta.getAbsolutePath());
+        }
 
     }
 
@@ -178,11 +179,13 @@ public class Practica3DI extends javax.swing.JFrame {
 
         jFileChooser1.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
-        jFileChooser1.showOpenDialog(this);
-        File ruta = jFileChooser1.getSelectedFile();
+        int resultado = jFileChooser1.showOpenDialog(this);
+        if (resultado != JFileChooser.CANCEL_OPTION) {
+            File ruta = jFileChooser1.getSelectedFile();
 
-        jTextField3.setText(ruta.getAbsolutePath());
+            jTextField3.setText(ruta.getAbsolutePath());
 
+        }
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
