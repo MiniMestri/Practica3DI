@@ -162,11 +162,11 @@ public class Practica3DI extends javax.swing.JFrame {
         jFileChooser1.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
         int resultado = jFileChooser1.showOpenDialog(this);
-       
+        if (resultado != JFileChooser.CANCEL_OPTION) {
             File ruta = jFileChooser1.getSelectedFile();
 
             jTextField2.setText(ruta.getAbsolutePath());
-        
+        }
 
     }
 
